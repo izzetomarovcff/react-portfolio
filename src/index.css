@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+nav{
+  backdrop-filter: blur(30px);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.contacticon{
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.sped{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.hidefix{
+  color: transparent;
+}
+.cardoverlay{
+  backdrop-filter: blur(5px);
+}
